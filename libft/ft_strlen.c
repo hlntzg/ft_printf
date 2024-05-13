@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/08 10:56:58 by hutzig            #+#    #+#             */
-/*   Updated: 2024/05/13 11:53:29 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/17 15:39:37 by hutzig            #+#    #+#             */
+/*   Updated: 2024/04/22 14:43:13 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdarg.h>
-# include <unistd.h>
+size_t	ft_strlen(const char *s)
+{
+	size_t	counter;
 
-int	ft_printf(const char *format, ...);
-int	ft_printf_char(char c);
-int	ft_printf_string(char *s);
-int	ft_printf_int(int n, int total_length);
-int	ft_printf_unsigned_int(unsigned int n, int total_length);
-int	ft_printf_hexadecimal(unsigned int n, char format, int total_length);
-int	ft_printf_pointer(void *ptr);
-
-#endif 
+	counter = 0;
+	while (s[counter])
+		counter++;
+	return (counter);
+}

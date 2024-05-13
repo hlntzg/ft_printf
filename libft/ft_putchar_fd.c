@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/08 10:56:58 by hutzig            #+#    #+#             */
-/*   Updated: 2024/05/13 11:53:29 by hutzig           ###   ########.fr       */
+/*   Created: 2024/04/24 09:28:24 by hutzig            #+#    #+#             */
+/*   Updated: 2024/05/06 14:49:55 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "libft.h"
 
-# include <stdarg.h>
-# include <unistd.h>
-
-int	ft_printf(const char *format, ...);
-int	ft_printf_char(char c);
-int	ft_printf_string(char *s);
-int	ft_printf_int(int n, int total_length);
-int	ft_printf_unsigned_int(unsigned int n, int total_length);
-int	ft_printf_hexadecimal(unsigned int n, char format, int total_length);
-int	ft_printf_pointer(void *ptr);
-
-#endif 
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
+/* The function writes a single character to the file descriptor. */
