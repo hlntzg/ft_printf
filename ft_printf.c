@@ -6,7 +6,7 @@
 /*   By: hutzig <hutzig@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 16:31:49 by hutzig            #+#    #+#             */
-/*   Updated: 2024/05/13 17:55:41 by hutzig           ###   ########.fr       */
+/*   Updated: 2024/05/15 17:28:31 by hutzig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_format_eval(va_list *ap, const char *cs)
 	else if (*cs == 'x')
 		len += ft_printf_hexadecimal(va_arg(*ap, unsigned int), 'x', 0);
 	else if (*cs == 'X')
-		len += ft_printf_hexadecimal(va_arg(ap, unsigned int), 'X', 0);
+		len += ft_printf_hexadecimal(va_arg(*ap, unsigned int), 'X', 0);
 	return (len);
 }
 
